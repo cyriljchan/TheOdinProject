@@ -1,0 +1,28 @@
+/* style.css */
+
+body {
+    font-family: 'Calibri';
+}
+
+/* number 1/3/5 */
+.class-1 {
+    background-color: #fca4a4;
+}
+
+/* number 3 */
+.class-2 {
+    font-size: 25px;
+}
+
+/* number 4 */
+#id-1 {
+    color: blue;
+    font-size: 40px;
+}
+
+/* number 5 */
+#id-2 {
+    background-color: greenyellow;
+    font-size: 25px;
+    font-weight: bold;
+}

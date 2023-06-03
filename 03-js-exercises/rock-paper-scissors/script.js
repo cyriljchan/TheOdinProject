@@ -12,7 +12,10 @@ function getPlayerChoice() {
     return (choice[0].toUpperCase() + choice.slice(1).toLowerCase());
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
+    let playerSelection = getPlayerChoice();
+    let computerSelection = getComputerChoice();
+
     let result = (playerSelection === computerSelection) ? 2 :
     ((playerSelection === "Rock" && computerSelection === "Scissors") || 
     (playerSelection === "Paper" && computerSelection === "Rock") ||

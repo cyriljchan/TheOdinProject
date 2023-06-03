@@ -13,12 +13,10 @@ function getPlayerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    let tie = (playerSelection === computerSelection);
-    let win = ((playerSelection === "Rock" && computerSelection === "Scissors") || 
+    let result = (playerSelection === computerSelection) ? 2 :
+    ((playerSelection === "Rock" && computerSelection === "Scissors") || 
     (playerSelection === "Paper" && computerSelection === "Rock") ||
-    (playerSelection === "Scissors" && computerSelection === "Paper"));
+    (playerSelection === "Scissors" && computerSelection === "Paper")) ? 1 : 0;
 
-    tie ? console.log(`You Tied! You both chose ${playerSelection}`) :
-    win ? console.log(`You Win! ${playerSelection} beats ${computerSelection}`) : 
-    console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+    return result;
 }

@@ -7,28 +7,20 @@ const subtract = function(x, y) {
 };
 
 const sum = function(arr) {
-	let sum = 0;
-  arr.forEach(num => sum += num);
-  return sum;
+	return arr.reduce((sum, num) => sum + num, 0);
 };
 
 const multiply = function(arr) {
-  let prod = 1;
-  arr.forEach(num => prod *= num);
-  return prod;
+  return arr.reduce((prod, num) => prod * num);
 };
 
 const power = function(x, y) {
-  let prod = 1;
-  for (let i=0; i<y; i++) {prod *= x};
-  return prod;
+  return Math.pow(x, y);
 };
 
 const factorial = function(x) {
-  let prod = 1;
-	if (x === 0) {return prod};
-  for (let i=x; i>0; i--){prod *= i};
-  return prod;
+  if (x === 0) {return 1};
+  return x * factorial(x - 1);
 };
 
 // Do not edit below this line
